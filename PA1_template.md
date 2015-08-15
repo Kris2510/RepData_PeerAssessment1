@@ -31,6 +31,19 @@ data_na <- na.omit(data)
 ```r
 grouped <- data_na %>% group_by(date)
 sums <-grouped %>% summarise_each(funs(sum), steps)
+head(sums)
+```
+
+```
+## Source: local data frame [6 x 2]
+## 
+##         date steps
+## 1 2012-10-02   126
+## 2 2012-10-03 11352
+## 3 2012-10-04 12116
+## 4 2012-10-05 13294
+## 5 2012-10-06 15420
+## 6 2012-10-07 11015
 ```
 ####1.2 Make a histogram of the total number of steps taken each day
 
